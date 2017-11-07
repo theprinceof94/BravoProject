@@ -1,1 +1,71 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0c9dab40-6486-482b-9d41-4ee6e02f99f9" name="BravoProjectModel" linkedPackageId="68e1c2cc-b8a0-4c9b-82db-d5688883ea1f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b69aeb24-1f16-4eed-bc19-f47e5eadb191">
+      <profileInstance Id="76f07a34-b5d3-4a85-b1df-4fbeeda67dd5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="bf1e20ab-a30b-46a0-a1e8-4ae1baaea245">
+      <profileInstance Id="0bd63538-d3ef-45ac-a16f-b9cfaa077213" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c0b467d9-ec99-4169-9439-1d4b436ff40e" name="Assignee" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5cecf73e-6379-4cd1-b838-97766368c634" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0cf0d734-da20-43e7-8207-cb4463dfbf7a" name="Requester" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="84c4372a-0e12-4a14-a0c4-e6747889db79" />
+        <ownedAttributesInternal>
+          <property Id="92fe4473-e66a-4c82-b79e-c3f75b27352e" name="RequesterID(pk)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e1cf3b24-95e1-41ae-8ee1-ab351b11a350" />
+          </property>
+          <property Id="51c5d6fc-6e22-494b-9aed-9377f0d6d99d" name="RequesterPhone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b86ac9f2-9a3e-4bb1-b0b2-6770c303ba3e" />
+          </property>
+          <property Id="20a136b0-0a81-42bb-9acb-63fdf20be877" name="RequesterEmail" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5c44f181-14e1-4872-9c41-8ff7d4ad1862" />
+          </property>
+          <property Id="d688e1c5-368e-44ff-8b32-924ef9b233ee" name="RequesterFullName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2e13bd06-10a5-413c-a69f-d164970a6b2e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3b1741c3-0cbd-477f-98fa-b1d0d184e0ab" name="Request" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f399d87d-0e4f-4726-80c7-c8d6d64923ff" />
+        <ownedAttributesInternal>
+          <property Id="de69961b-5905-4d18-ba94-06dff8cd7833" name="RequestorID(fk)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06223925-5c99-43b9-a023-a4864231da74" />
+          </property>
+          <property Id="7fd36948-b73f-46c4-b780-5726a94461b8" name="AssigneeID(fk)(*?)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9e9121a3-26a0-4a60-942d-a9d3418924f3" />
+          </property>
+          <property Id="b3d7f4cf-5ffb-44bf-a790-010a46d255e3" name="RequestID(pk)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ab37abc7-8148-40f6-b9a1-deae7ad529e1" />
+          </property>
+          <property Id="3362c59e-938d-4242-8f43-72f37fe7e726" name="Type(if we have time)" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="886ce16c-c89e-4bb4-b83c-2767d2253abb" />
+          </property>
+          <property Id="f5d27c92-4556-4063-ad93-e22bec3092f8" name="CurrentStage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12af2d02-9626-43d3-b78d-bbb814c5a955" />
+          </property>
+          <property Id="21fb7159-0e9d-4845-9764-c7ffe4e85b75" name="Comments" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d5311e8-8eae-4bc0-b3b4-058cf165263e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="68e1c2cc-b8a0-4c9b-82db-d5688883ea1f" name="BravoProjectModel">
+    <elementDefinition Id="88d49ba5-3e8e-4665-a7d3-9ed7f4e23234" />
+  </package>
+</logicalClassDesignerModel>
