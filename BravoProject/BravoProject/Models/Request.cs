@@ -21,10 +21,15 @@ namespace BravoProject.Models
         public List<Attachment> Attachments { get; set; }
 
 
-        public Request()
+        public Request(string requesterUserID,string comment,List<User> assigneeList,List<Attachment> attachmentsList)
         {
             this.RequestDate = DateTime.Now;
             this.CurrentStage = 1;
+
+            this.RequesterUserID = requesterUserID;
+            this.Comment = comment;
+            this.AssigneeList = assigneeList;
+            this.Attachments = attachmentsList;
         }
 
         public Request()
@@ -39,6 +44,8 @@ namespace BravoProject.Models
 
             Request req = new Request();
             requestList.Add(req);
+
+            return requestList;
         }
 
     }
