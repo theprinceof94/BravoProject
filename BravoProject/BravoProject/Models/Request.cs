@@ -30,7 +30,6 @@ namespace BravoProject.Models
     public static List<Request> AddNewRequest()
     {
         Request request = new Request();
-#
 
     }
 
