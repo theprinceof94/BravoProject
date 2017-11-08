@@ -24,7 +24,9 @@ namespace BravoProject.Models
         public Request()
         {
             this.RequestDate = DateTime.Now;
-            this.CurrentStage = 1;
+            this.CurrentStage = 0;
+            this.Comment = null;
+            this.Attachments = null;
         }
 
         public Request()
@@ -41,6 +43,11 @@ namespace BravoProject.Models
             requestList.Add(req);
         }
 
+        public static List<Request> SeeComments()
+        {
+//Maybe we want this?
+        }
+    
     }
 
 
