@@ -1,6 +1,8 @@
 namespace BravoProject.Migrations
 {
+    using Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,6 +16,11 @@ namespace BravoProject.Migrations
 
         protected override void Seed(BravoProject.Models.ApplicationDbContext context)
         {
+            List<User> usersList = User.PopulateUsers();
+            context.Users.AddRange(usersList);
+            context.SaveChanges();
+
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
