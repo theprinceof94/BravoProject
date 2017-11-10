@@ -14,7 +14,7 @@ namespace BravoProject.Models
         [ForeignKey("UserID")]
         public ApplicationUser ApplicationUser { get; set; }
 
-        public User(string fullname): base(fullname)
+        public User(string fullname,string email): base(fullname, email)
         {
 
         }
@@ -27,19 +27,19 @@ namespace BravoProject.Models
         {
             List<User> userList = new List<User>();
 
-            User user = new User("Liv Sartoris");
+            User user = new User("Liv Sartoris","liv@test.com");
             user.UserID = user.Id;
             userList.Add(user);
 
-            user = new User("Erick Williams");
+            user = new User("Erick Williams","erick@test.com");
             user.UserID = user.Id;
             userList.Add(user);
 
-            user = new User("Cam Morris");
+            user = new User("Cam Morris","cam@test.com");
             user.UserID = user.Id;
             userList.Add(user);
 
-            user = new User("Jacob Spitale");
+            user = new User("Jacob Spitale","jake@test.com");
             user.UserID = user.Id;
             userList.Add(user);
 

@@ -11,15 +11,16 @@ namespace BravoProject.Models
     public class ApplicationUser : IdentityUser
     {
         public string FullName;
-        public ApplicationUser(string fullname)
+        public ApplicationUser(string fullname,string email)
         {
             this.FullName = fullname;
+            this.Email = email;
 
             //additional properties required
             this.SecurityStamp = Guid.NewGuid().ToString();
             PasswordHasher hasher = new PasswordHasher();
             this.PasswordHash = hasher.HashPassword(fullname);
-            this.UserName = fullname;
+            this.UserName = email;
         }
         public ApplicationUser()
         {
@@ -48,5 +49,6 @@ namespace BravoProject.Models
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Request> Requests { get; set; }
     }
 }

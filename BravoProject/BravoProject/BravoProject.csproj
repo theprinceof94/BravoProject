@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201711080040301_AddedUser.Designer.cs">
       <DependentUpon>201711080040301_AddedUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711101948495_SwitchingToCamsDB.cs" />
+    <Compile Include="Migrations\201711101948495_SwitchingToCamsDB.Designer.cs">
+      <DependentUpon>201711101948495_SwitchingToCamsDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Action.cs" />
@@ -324,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711080040301_AddedUser.resx">
       <DependentUpon>201711080040301_AddedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101948495_SwitchingToCamsDB.resx">
+      <DependentUpon>201711101948495_SwitchingToCamsDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
