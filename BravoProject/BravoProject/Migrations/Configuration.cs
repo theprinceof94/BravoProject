@@ -20,6 +20,10 @@ namespace BravoProject.Migrations
             context.Users.AddRange(usersList);
             context.SaveChanges();
 
+            List<Request> requestList = Request.PopulateRequests();
+            context.Requests.AddRange(requestList);
+            context.SaveChanges();
+
 
             //  This method will be called after migrating to the latest version.
 
